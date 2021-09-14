@@ -31,7 +31,7 @@
           v-for="(item, index) in leaderboard_data"
           :key="item.score"
         >
-          <td>{{ item.rankTier }}</td>
+          <td>{{ RANK_TIER_TABLE[item.rankTier] }}</td>
           <td>{{ index+1 }}</td>
           <td>{{ item.name }}</td>
           <td>{{ item.score }}</td>
@@ -77,6 +77,16 @@ export default {
         mp_weapon_doubletake: '三重击狙击枪',
         mp_weapon_wingman: '辅助手枪',
         mp_weapon_melee_survival: '近战攻击'
+      },
+      RANK_TIER_TABLE: {
+        BRONZE: '青铜',
+        SILVER: '白银',
+        GOLD: '黄金',
+        PLATINUM: '铂金',
+        DIAMOND: '钻石',
+        MASTER: '大师',
+        PREDATOR: '猎杀者',
+        APEX_PREDATOR: '顶尖猎杀者'
       }
     }
   },

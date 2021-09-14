@@ -239,3 +239,59 @@
       <div class="py-12" />
     </section>
   </v-container>
+
+  MAPS_TABLE = {
+    "mp_rr_desertlands_64k_x_64k_nx": "夜晚世界边缘",
+    "mp_rr_desertlands_64k_x_64k": "世界边缘",
+    "mp_rr_canyonlands_mu1": "诸王峡谷(第2赛季)",
+    "mp_rr_canyonlands_mu1_night": "夜晚诸王峡谷",
+    "mp_rr_canyonlands_64k_x_64k": "诸王峡谷(第0赛季)",
+    "mp_rr_canyonlands_staging": "靶场",
+    "mp_lobby": "大厅"
+}
+
+
+MODE_TABLE = {
+    "survival": "大逃杀",
+    "custom_tdm": "死斗",
+    "survival_dev": "开发模式",
+    "survival_firingrange": "射击场",
+    "gungame": "军备竞赛"
+}
+
+WEAPON_TABLE = {
+    "mp_weapon_alternator_smg": "转换者冲锋枪",
+    "mp_weapon_defender": "充能步枪",
+    "mp_weapon_esaw": "专注轻机枪",
+    "mp_weapon_shotgun": "EVA8霰弹枪",
+    "mp_weapon_vinson": "VK-47平行步枪",
+    "mp_weapon_g2": "G7侦查步枪",
+    "mp_weapon_energy_ar": "哈沃克步枪",
+    "mp_weapon_hemlok": "赫姆洛克连发步枪",
+    "mp_weapon_sniper": "克雷贝尔狙击枪",
+    "mp_weapon_dmr": "长弓DMR狙击枪",
+    "mp_weapon_lstar": "L-Star轻机枪",
+    "mp_weapon_mastiff": "獒犬霰弹枪",
+    "mp_weapon_shotgun_pistol": "莫桑比克霰弹枪",
+    "mp_weapon_semipistol": "P2020",
+    "mp_weapon_energy_shotgun": "和平捍卫者霰弹枪",
+    "mp_weapon_pdw": "猎兽冲锋枪",
+    "mp_weapon_rspn101": "R-301自动步枪",
+    "mp_weapon_r97": "R-99冲锋枪",
+    "mp_weapon_autopistol": "RE-45",
+    "mp_weapon_lmg": "喷火轻机枪",
+    "mp_weapon_doubletake": "三重击狙击枪",
+    "mp_weapon_wingman": "辅助手枪",
+    "mp_weapon_melee_survival": "近战攻击"
+}
+
+RANK_TIRE_TABLE = {
+    "BRONZE": "青铜",
+    "SILVER": "白银",
+    "GOLD": "黄金",
+    "PLATINUM": "铂金",
+    "DIAMOND": "钻石",
+    "MASTER": "大师",
+    "PREDATOR": "猎杀者",
+    "APEX_PREDATOR": "顶尖猎杀者"
+}
