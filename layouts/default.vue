@@ -17,6 +17,10 @@
           排行榜
           <v-icon>{{ icons.leaderboard }}</v-icon>
         </v-btn>
+        <v-btn class="pa-2 ma-2" to="/servers" router exact>
+          服务器
+          <v-icon>{{ icons.servers }}</v-icon>
+        </v-btn>
         <v-btn class="pa-2 ma-2" to="/faq" router exact>
           常见问题
           <v-icon>{{ icons.faq }}</v-icon>
@@ -103,7 +107,8 @@ $blur-function: blur(3px);
 import {
   mdiPodiumGold,
   mdiFrequentlyAskedQuestions,
-  mdiUpdate
+  mdiUpdate,
+  mdiServerNetwork
 } from '@mdi/js'
 
 export default {
@@ -113,7 +118,8 @@ export default {
       icons: {
         leaderboard: mdiPodiumGold,
         faq: mdiFrequentlyAskedQuestions,
-        update_note: mdiUpdate
+        update_note: mdiUpdate,
+        servers: mdiServerNetwork
       }
     }
   }

@@ -36,7 +36,7 @@
           <td>{{ item.name }}</td>
           <td>{{ item.score }}</td>
           <td>{{ item.accurate }}</td>
-          <td>{{ item.weapon }}</td>
+          <td>{{ WEAPON_TABLE[item.weapon] }}</td>
           <td>{{ item.updateTime }}</td>
         </tr>
       </tbody>
@@ -52,7 +52,32 @@ export default {
       loading: true,
       leaderboard_data: [],
       live_status: -1,
-      live_title: '载入中'
+      live_title: '载入中',
+      WEAPON_TABLE: {
+        mp_weapon_alternator_smg: '转换者冲锋枪',
+        mp_weapon_defender: '充能步枪',
+        mp_weapon_esaw: '专注轻机枪',
+        mp_weapon_shotgun: 'EVA8霰弹枪',
+        mp_weapon_vinson: 'VK-47平行步枪',
+        mp_weapon_g2: 'G7侦查步枪',
+        mp_weapon_energy_ar: '哈沃克步枪',
+        mp_weapon_hemlok: '赫姆洛克连发步枪',
+        mp_weapon_sniper: '克雷贝尔狙击枪',
+        mp_weapon_dmr: '长弓DMR狙击枪',
+        mp_weapon_lstar: 'L-Star轻机枪',
+        mp_weapon_mastiff: '獒犬霰弹枪',
+        mp_weapon_shotgun_pistol: '莫桑比克霰弹枪',
+        mp_weapon_semipistol: 'P2020',
+        mp_weapon_energy_shotgun: '和平捍卫者霰弹枪',
+        mp_weapon_pdw: '猎兽冲锋枪',
+        mp_weapon_rspn101: 'R-301自动步枪',
+        mp_weapon_r97: 'R-99冲锋枪',
+        mp_weapon_autopistol: 'RE-45',
+        mp_weapon_lmg: '喷火轻机枪',
+        mp_weapon_doubletake: '三重击狙击枪',
+        mp_weapon_wingman: '辅助手枪',
+        mp_weapon_melee_survival: '近战攻击'
+      }
     }
   },
   computed: {
