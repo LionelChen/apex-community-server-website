@@ -79,5 +79,17 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+  },
+  axios: {
+    proxy: true,
+    prefix: '', // it only work when proxy is enabled
+    credentials: true,
+  },
+  proxy: {
+    '/api': {
+      target: 'http://r5-comp.apex.diana.red:37000/',
+      pathRewrite: {'^/api': ''},
+      changeOrigin: true,
+    }
   }
 }

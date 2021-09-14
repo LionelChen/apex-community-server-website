@@ -13,15 +13,15 @@
 
         <v-spacer />
 
-        <v-btn class="pa-2 ma-2" to="/inspire" router exact>
+        <v-btn class="pa-2 ma-2" to="/leaderboard" router exact>
           排行榜
           <v-icon>{{ icons.leaderboard }}</v-icon>
         </v-btn>
-        <v-btn class="pa-2 ma-2">
+        <v-btn class="pa-2 ma-2" to="/faq" router exact>
           常见问题
           <v-icon>{{ icons.faq }}</v-icon>
         </v-btn>
-        <v-btn class="pa-2 ma-2">
+        <v-btn class="pa-2 ma-2" to="/patchnote" router exact>
           更新日志
           <v-icon>{{ icons.update_note }}</v-icon>
         </v-btn>
@@ -52,7 +52,7 @@
         </v-menu>
       </v-app-bar>
       <v-main>
-        <v-container class="page">
+        <v-container class="page ma-0">
           <nuxt />
         </v-container>
         <v-footer
