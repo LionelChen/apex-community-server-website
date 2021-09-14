@@ -52,7 +52,7 @@
         </v-menu>
       </v-app-bar>
       <v-main>
-        <v-container class="page ma-0">
+        <v-container class="page">
           <nuxt />
         </v-container>
         <v-footer

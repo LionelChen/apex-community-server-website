@@ -1,23 +1,43 @@
 <template>
-  <v-simple-table dark>
+  <v-simple-table dark class="mt-16">
     <template #default>
       <thead>
         <tr>
           <th class="text-left">
-            Name
+            段位
           </th>
           <th class="text-left">
-            Calories
+            排名
+          </th>
+          <th class="text-left">
+            ID
+          </th>
+          <th class="text-left">
+            分数
+          </th>
+          <th class="text-left">
+            命中率
+          </th>
+          <th class="text-left">
+            使用武器
+          </th>
+          <th class="text-left">
+            上传时间
           </th>
         </tr>
       </thead>
       <tbody>
         <tr
-          v-for="item in leaderboard_data"
+          v-for="(item, index) in leaderboard_data"
           :key="item.score"
         >
+          <td>{{ item.rankTier }}</td>
+          <td>{{ index+1 }}</td>
           <td>{{ item.name }}</td>
           <td>{{ item.score }}</td>
+          <td>{{ item.accurate }}</td>
+          <td>{{ item.weapon }}</td>
+          <td>{{ item.updateTime }}</td>
         </tr>
       </tbody>
     </template>
