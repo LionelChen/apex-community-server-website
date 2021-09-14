@@ -88,6 +88,16 @@
     </v-app>
   </div>
 </template>
+<style lang="scss">
+$blur-function: blur(3px);
+
+.page {
+  box-sizing: border-box;
+  min-height: 100%;
+  padding-bottom: 112px;
+}
+
+</style>
 
 <script>
 import {
