@@ -29,9 +29,11 @@
       <tbody>
         <tr
           v-for="(item, index) in leaderboard_data"
-          :key="item.score"
+          :key="index"
         >
-          <td>{{ RANK_TIER_TABLE[item.rankTier] }}</td>
+          <td :class="item.rankTier" style="text-align: center;">
+                {{ RANK_TIER_TABLE[item.rankTier] }}
+          </td>
           <td>{{ index+1 }}</td>
           <td>{{ item.name }}</td>
           <td>{{ item.score }}</td>
@@ -87,6 +89,16 @@ export default {
         MASTER: '大师',
         PREDATOR: '猎杀者',
         APEX_PREDATOR: '顶尖猎杀者'
+      },
+      RANK_TIER_ICON_TABLE: {
+        BRONZE: 'Ranked_Tier1_Bronze.png',
+        SILVER: 'Ranked_Tier2_Silver.png',
+        GOLD: 'Ranked_Tier3_Gold.png',
+        PLATINUM: 'Ranked_Tier4_Platinum.png',
+        DIAMOND: 'Ranked_Tier5_Diamond.png',
+        MASTER: 'Ranked_Tier6_Master.png',
+        PREDATOR: 'Ranked_Tier7_Apex_Predator.png',
+        APEX_PREDATOR: 'Ranked_Tier7_Apex_Predator.png'
       }
     }
   },
@@ -102,7 +114,7 @@ export default {
         .get(APIURL)
         .then((res) => {
           this.leaderboard_data = res.data.result
-          console.log(this.leaderboard_data)
+          // console.log(this.leaderboard_data)
         })
         .catch((err) => {
           console.log(err)
@@ -114,3 +126,13 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.APEX_PREDATOR{
+  background: url('/test.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  max-height: 50px;
+}
+</style>

@@ -67,7 +67,7 @@ export default {
         .get(APIURL)
         .then((res) => {
           this.online_server_data = res.data.servers
-          console.log(this.online_server_data)
+          // console.log(this.online_server_data)
         })
         .catch((err) => {
           console.log(err)
