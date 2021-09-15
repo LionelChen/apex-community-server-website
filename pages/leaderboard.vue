@@ -32,10 +32,17 @@
           :key="index"
         >
           <td :class="item.rankTier" style="text-align: center;">
-                {{ RANK_TIER_TABLE[item.rankTier] }}
+            {{ RANK_TIER_TABLE[item.rankTier] }}
           </td>
           <td>{{ index+1 }}</td>
-          <td>{{ item.name }}</td>
+          <td>
+            <div
+              :class="(item.rankTier=='APEX_PREDATOR') ? 'APEX_PREDATOR_USER_NAME' : ''"
+              :data-text="item.name"
+            >
+              {{ item.name }}
+            </div>
+          </td>
           <td>{{ item.score }}</td>
           <td>{{ item.accurate }}</td>
           <td>{{ WEAPON_TABLE[item.weapon] }}</td>
@@ -135,4 +142,166 @@ export default {
   background-position: center;
   max-height: 50px;
 }
+
+.APEX_PREDATOR_USER_NAME {
+  color: white;
+  position: relative;
+  width: 400px;
+  margin-left: 0;
+}
+
+@keyframes noise-anim {
+  0% {
+    clip-path: inset(30% 0 3% 0);
+  }
+  5% {
+    clip-path: inset(19% 0 57% 0);
+  }
+  10% {
+    clip-path: inset(38% 0 33% 0);
+  }
+  15% {
+    clip-path: inset(49% 0 19% 0);
+  }
+  20% {
+    clip-path: inset(52% 0 3% 0);
+  }
+  25% {
+    clip-path: inset(1% 0 36% 0);
+  }
+  30% {
+    clip-path: inset(38% 0 53% 0);
+  }
+  35% {
+    clip-path: inset(27% 0 74% 0);
+  }
+  40% {
+    clip-path: inset(49% 0 1% 0);
+  }
+  45% {
+    clip-path: inset(18% 0 25% 0);
+  }
+  50% {
+    clip-path: inset(91% 0 1% 0);
+  }
+  55% {
+    clip-path: inset(100% 0 1% 0);
+  }
+  60% {
+    clip-path: inset(87% 0 10% 0);
+  }
+  65% {
+    clip-path: inset(39% 0 52% 0);
+  }
+  70% {
+    clip-path: inset(26% 0 62% 0);
+  }
+  75% {
+    clip-path: inset(32% 0 58% 0);
+  }
+  80% {
+    clip-path: inset(9% 0 74% 0);
+  }
+  85% {
+    clip-path: inset(91% 0 2% 0);
+  }
+  90% {
+    clip-path: inset(95% 0 3% 0);
+  }
+  95% {
+    clip-path: inset(12% 0 32% 0);
+  }
+  100% {
+    clip-path: inset(45% 0 52% 0);
+  }
+}
+.APEX_PREDATOR_USER_NAME::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 2px;
+  text-shadow: -1px 0 red;
+  top: 0;
+  color: white;
+  background: black;
+  overflow: hidden;
+  animation: noise-anim 2s infinite linear alternate-reverse;
+}
+
+@keyframes noise-anim-2 {
+  0% {
+    clip-path: inset(28% 0 45% 0);
+  }
+  5% {
+    clip-path: inset(9% 0 35% 0);
+  }
+  10% {
+    clip-path: inset(79% 0 7% 0);
+  }
+  15% {
+    clip-path: inset(87% 0 11% 0);
+  }
+  20% {
+    clip-path: inset(4% 0 22% 0);
+  }
+  25% {
+    clip-path: inset(2% 0 64% 0);
+  }
+  30% {
+    clip-path: inset(17% 0 3% 0);
+  }
+  35% {
+    clip-path: inset(14% 0 71% 0);
+  }
+  40% {
+    clip-path: inset(49% 0 24% 0);
+  }
+  45% {
+    clip-path: inset(93% 0 3% 0);
+  }
+  50% {
+    clip-path: inset(23% 0 56% 0);
+  }
+  55% {
+    clip-path: inset(7% 0 22% 0);
+  }
+  60% {
+    clip-path: inset(20% 0 47% 0);
+  }
+  65% {
+    clip-path: inset(96% 0 4% 0);
+  }
+  70% {
+    clip-path: inset(23% 0 9% 0);
+  }
+  75% {
+    clip-path: inset(37% 0 60% 0);
+  }
+  80% {
+    clip-path: inset(83% 0 15% 0);
+  }
+  85% {
+    clip-path: inset(32% 0 5% 0);
+  }
+  90% {
+    clip-path: inset(49% 0 33% 0);
+  }
+  95% {
+    clip-path: inset(20% 0 75% 0);
+  }
+  100% {
+    clip-path: inset(11% 0 89% 0);
+  }
+}
+.APEX_PREDATOR_USER_NAME::before {
+  content: attr(data-text);
+  position: absolute;
+  left: -2px;
+  text-shadow: 1px 0 blue;
+  top: 0;
+  color: white;
+  background: black;
+  overflow: hidden;
+  animation: noise-anim-2 15s infinite linear alternate-reverse;
+}
+
 </style>
