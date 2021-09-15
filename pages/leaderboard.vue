@@ -222,7 +222,7 @@ export default {
   text-shadow: -1px 0 red;
   top: 0;
   color: white;
-  background: black;
+  background: rgb(30, 30, 30);
   overflow: hidden;
   animation: noise-anim 2s infinite linear alternate-reverse;
 }
@@ -299,7 +299,7 @@ export default {
   text-shadow: 1px 0 blue;
   top: 0;
   color: white;
-  background: black;
+  background: rgb(30, 30, 30);
   overflow: hidden;
   animation: noise-anim-2 15s infinite linear alternate-reverse;
 }
