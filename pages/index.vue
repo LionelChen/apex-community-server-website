@@ -1,13 +1,9 @@
 <template>
   <v-layout column justify-center align-center app mt-16>
-    <v-container grid-list-md text-xs-center fluid>
+    <v-container grid-list-md text-xs-center fluid pa-0>
       <v-layout row wrap>
-        <v-flex xs12>
-          <v-card dark color="primary">
-            <v-card-text class="px-0" style="height: 100vh;">
-              12
-            </v-card-text>
-          </v-card>
+        <v-flex xs12 class="px-0" style="height: 100vh;" id="landing">
+          12
         </v-flex>
         <v-flex v-for="i in 3" :key="`4${i}`" xs4>
           <v-card dark color="secondary" style="height: 80vh;">
@@ -109,3 +105,11 @@ export default {
   }
 }
 </script>
+
+<style>
+#landing{
+  background: url('/loader.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>

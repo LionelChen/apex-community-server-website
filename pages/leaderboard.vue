@@ -229,7 +229,7 @@ export default {
   color: white;
   background: rgb(30, 30, 30);
   overflow: hidden;
-  animation: noise-anim 2s infinite linear alternate-reverse;
+  animation: noise-anim 5s infinite linear alternate-reverse;
 }
 
 @keyframes noise-anim-2 {
@@ -306,7 +306,7 @@ export default {
   color: white;
   background: rgb(30, 30, 30);
   overflow: hidden;
-  animation: noise-anim-2 15s infinite linear alternate-reverse;
+  animation: noise-anim-2 30s infinite linear alternate-reverse;
 }
 
 </style>
