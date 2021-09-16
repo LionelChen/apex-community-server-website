@@ -1,5 +1,10 @@
 <template>
-  <v-simple-table dark class="mt-16">
+  <v-simple-table
+    dark
+    class="mt-16"
+    loading
+    loading-text="Loading... Please wait"
+  >
     <template #default>
       <thead>
         <tr>

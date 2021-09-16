@@ -1,55 +1,56 @@
 <template>
-  <v-card
-    class="mt-16"
-    max-width="1200"
-  >
-    <v-card-title
-      class="blue-grey white--text"
+  <v-container grid-list-md text-xs-center fluid>
+    <v-card
+      class="mt-16"
     >
-      <span class="text-h6">Logs</span>
-      <v-spacer />
-      <v-btn
-        :outlined="interval == null"
-        :color="interval == null ? 'white' : 'primary'"
-        dark
-        depressed
-        @click="interval == null ? start() : stop()"
+      <v-card-title
+        class="blue-grey white--text"
       >
-        Realtime Logging
-      </v-btn>
-    </v-card-title>
-    <v-card-text class="py-0">
-      <v-timeline>
-        <v-slide-x-reverse-transition
-          group
-          hide-on-leave
+        <span class="text-h6">更新日志</span>
+        <v-spacer />
+        <v-btn
+          :outlined="interval == null"
+          :color="interval == null ? 'white' : 'primary'"
+          dark
+          depressed
+          @click="interval == null ? start() : stop()"
         >
-          <v-timeline-item
-            v-for="item in items"
-            :key="item.id"
-            :color="item.color"
-            small
-            fill-dot
+            添加更多测试更新日志
+        </v-btn>
+      </v-card-title>
+      <v-card-text class="py-0">
+        <v-timeline>
+          <v-slide-x-reverse-transition
+            group
+            hide-on-leave
           >
-            <template #opposite>
-              <span
-                :class="`headline font-weight-bold`"
-                v-text="String('2021/08/30')"
-              />
-            </template>
-            <v-alert
-              :value="true"
+            <v-timeline-item
+              v-for="item in items"
+              :key="item.id"
               :color="item.color"
-              :icon="item.icon"
-              class="white--text"
+              small
+              fill-dot
             >
-              Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.
-            </v-alert>
-          </v-timeline-item>
-        </v-slide-x-reverse-transition>
-      </v-timeline>
-    </v-card-text>
-  </v-card>
+              <template #opposite>
+                <span
+                  :class="`headline font-weight-bold`"
+                  v-text="String('2021/08/30')"
+                />
+              </template>
+              <v-alert
+                :value="true"
+                :color="item.color"
+                :icon="item.icon"
+                class="white--text"
+              >
+                Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.
+              </v-alert>
+            </v-timeline-item>
+          </v-slide-x-reverse-transition>
+        </v-timeline>
+      </v-card-text>
+    </v-card>
+  </v-container>
 </template>
 
 <script>
@@ -99,7 +100,7 @@ export default {
         icon
       })
 
-      if (this.nonce > 6) {
+      if (this.nonce > 8) {
         this.items.pop()
       }
     },

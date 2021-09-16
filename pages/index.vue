@@ -4,22 +4,22 @@
       <v-layout row wrap>
         <v-flex xs12>
           <v-card dark color="primary">
-            <v-card-text class="px-0">
+            <v-card-text class="px-0" style="height: 100vh;">
               12
             </v-card-text>
           </v-card>
         </v-flex>
-        <v-flex v-for="i in 2" :key="`6${i}`" xs6>
-          <v-card dark color="secondary">
+        <v-flex v-for="i in 3" :key="`4${i}`" xs4>
+          <v-card dark color="secondary" style="height: 80vh;">
             <v-card-text class="px-0">
-              6
+              4
             </v-card-text>
           </v-card>
         </v-flex>
-        <v-flex v-for="i in 3" :key="`4${i}`" xs4>
-          <v-card dark color="primary">
+        <v-flex xs12>
+          <v-card dark color="primary" style="height: 60vh;">
             <v-card-text class="px-0">
-              4
+              12
             </v-card-text>
           </v-card>
         </v-flex>

@@ -56,7 +56,7 @@
         </v-menu>
       </v-app-bar>
       <v-main>
-        <v-container fluid class="page">
+        <v-container fluid class="page" pa-0>
           <nuxt />
         </v-container>
         <v-footer
