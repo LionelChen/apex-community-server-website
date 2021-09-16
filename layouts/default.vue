@@ -56,11 +56,11 @@
         </v-menu>
       </v-app-bar>
       <v-main>
-        <v-container class="page">
+        <v-container fluid class="page">
           <nuxt />
         </v-container>
         <v-footer
-          :padless="padless"
+          :padless="true"
         >
           <v-card
             flat
