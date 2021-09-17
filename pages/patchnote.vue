@@ -15,7 +15,7 @@
           depressed
           @click="interval == null ? start() : stop()"
         >
-            添加更多测试更新日志
+          添加更多测试更新日志
         </v-btn>
       </v-card-title>
       <v-card-text class="py-0">

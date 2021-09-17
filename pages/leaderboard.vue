@@ -141,11 +141,11 @@ export default {
 
 <style scoped>
 .APEX_PREDATOR{
-  background: url('/test.gif');
+  background: url('/test.webp');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  max-height: 50px;
+  max-height: 300px;
 }
 
 .APEX_PREDATOR_USER_NAME {

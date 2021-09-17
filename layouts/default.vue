@@ -3,7 +3,6 @@
     <v-app>
       <v-app-bar
         color="red accent-4"
-
         dark
         fixed
       >

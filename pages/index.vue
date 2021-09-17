@@ -2,25 +2,56 @@
   <v-layout column justify-center align-center app mt-16>
     <v-container grid-list-md text-xs-center fluid pa-0>
       <v-layout row wrap>
-        <v-flex xs12 class="px-0" style="height: 100vh;" id="landing">
-          12
+        <v-flex id="landing" xs12 class="px-0 text-h1" style="height: 100vh;">
+          <v-container fill-height fluid>
+            <v-row
+              align="center"
+              justify="center"
+            >
+              <v-col>
+                <p
+                  class="header text-center"
+                >
+                  APEX社区服务器
+                </p>
+                <v-col />
+              </v-col>
+            </v-row>
+          </v-container>
+        </v-flex>
+        <v-flex id="works_top" xs12 class="px-0" style="height: 40vh">
+          <v-container fill-height fluid>
+            <v-row
+              align="center"
+              justify="center"
+            >
+              <v-col>
+                <p
+                  class="header text-center white--text"
+                >
+                  更新日志
+                </p>
+                <v-col />
+              </v-col>
+            </v-row>
+          </v-container>
         </v-flex>
         <v-flex v-for="i in 3" :key="`4${i}`" xs4>
-          <v-card dark color="secondary" style="height: 80vh;">
+          <v-card color="secondary" style="height: 80vh;">
             <v-card-text class="px-0">
               4
             </v-card-text>
           </v-card>
         </v-flex>
         <v-flex xs12>
-          <v-card dark color="primary" style="height: 60vh;">
+          <v-card color="primary" style="height: 60vh;">
             <v-card-text class="px-0">
               12
             </v-card-text>
           </v-card>
         </v-flex>
         <v-flex v-for="i in 4" :key="`3${i}`" xs3>
-          <v-card dark color="secondary">
+          <v-card color="secondary">
             <v-card-text class="px-0">
               3
             </v-card-text>
@@ -109,6 +140,20 @@ export default {
 <style>
 #landing{
   background: url('/loader.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#works_top {
+  /* The image used */
+  background-image: url("/works_bg.jpg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
