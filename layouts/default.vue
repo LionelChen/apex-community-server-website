@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" style="min-height: 100vh;">
     <v-app>
       <v-app-bar
         color="red accent-4"

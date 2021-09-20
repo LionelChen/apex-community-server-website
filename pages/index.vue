@@ -36,40 +36,56 @@
             </v-row>
           </v-container>
         </v-flex>
-        <v-flex v-for="i in 3" :key="`4${i}`" xs4>
-          <v-card color="secondary" style="height: 80vh;">
-            <v-card-text class="px-0">
-              4
-            </v-card-text>
-          </v-card>
+        <v-flex id="works_content" xs12 class="px-0" style="height: 80vh">
+          <v-container fill-height fluid>
+            <v-row
+              align="center"
+              justify="center"
+            >
+              <v-flex v-for="i in 3" :key="`4${i}`" xs4 pa-2>
+                <v-card color="secondary" style="height: 80vh;">
+                  <v-card-text class="px-0">
+                    4
+                  </v-card-text>
+                </v-card>
+              </v-flex>
+            </v-row>
+          </v-container>
         </v-flex>
-        <v-flex xs12>
-          <v-card color="primary" style="height: 60vh;">
-            <v-card-text class="px-0">
-              12
-            </v-card-text>
-          </v-card>
+
+        <v-flex id="download_top" xs12 class="px-0" style="height: 40vh">
+          <v-container fill-height fluid>
+            <v-row
+              align="center"
+              justify="center"
+            >
+              <v-col>
+                <p
+                  class="header text-center white--text"
+                >
+                  更新日志
+                </p>
+                <v-col />
+              </v-col>
+            </v-row>
+          </v-container>
         </v-flex>
-        <v-flex v-for="i in 4" :key="`3${i}`" xs3>
-          <v-card color="secondary">
-            <v-card-text class="px-0">
-              3
-            </v-card-text>
-          </v-card>
-        </v-flex>
-        <v-flex v-for="i in 6" :key="`2${i}`" xs2>
-          <v-card dark color="primary">
-            <v-card-text class="px-0">
-              2
-            </v-card-text>
-          </v-card>
-        </v-flex>
-        <v-flex v-for="i in 12" :key="`1${i}`" xs1>
-          <v-card dark color="secondary">
-            <v-card-text class="px-0">
-              1
-            </v-card-text>
-          </v-card>
+
+        <v-flex id="download" xs12 class="px-0" style="height: 80vh">
+          <v-container fill-height fluid>
+            <v-row
+              align="center"
+              justify="center"
+            >
+              <v-flex v-for="i in 3" :key="`4${i}`" xs4 pa-2>
+                <v-card color="secondary" style="height: 80vh;">
+                  <v-card-text class="px-0">
+                    4
+                  </v-card-text>
+                </v-card>
+              </v-flex>
+            </v-row>
+          </v-container>
         </v-flex>
       </v-layout>
     </v-container>
@@ -147,6 +163,20 @@ export default {
 #works_top {
   /* The image used */
   background-image: url("/works_bg.jpg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#download_top {
+  /* The image used */
+  background-image: url("/gallery_bg.jpg");
 
   /* Full height */
   height: 100%;
