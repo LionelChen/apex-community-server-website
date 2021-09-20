@@ -36,7 +36,7 @@
             </v-row>
           </v-container>
         </v-flex>
-        <v-flex id="works_content" xs12 class="px-0" style="height: 80vh">
+        <v-flex id="works_content" xs12 class="px-0 mb-5" style="height: 80vh">
           <v-container fill-height fluid>
             <v-row
               align="center"
@@ -63,7 +63,7 @@
                 <p
                   class="header text-center white--text"
                 >
-                  更新日志
+                  下载链接
                 </p>
                 <v-col />
               </v-col>
