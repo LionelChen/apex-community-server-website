@@ -17,6 +17,17 @@
                 <v-col />
               </v-col>
             </v-row>
+            <v-row
+              align="center"
+              justify="center"
+            >
+              <v-btn
+                elevation="2"
+                href="#works-top"
+              >
+                <v-icon>{{ icons.down_arrow }}</v-icon>
+              </v-btn>
+            </v-row>
           </v-container>
         </v-flex>
         <v-flex id="works_top" xs12 class="px-0" style="height: 40vh">
@@ -46,30 +57,77 @@
               <v-flex xs4 pa-2>
                 <section style="height: 80vh;">
                   <v-card-text class="px-0">
-                    <img src="/team_1.jpg" alt="">
-                    <p>
-                      123321
-                    </p>
+                    <v-flex>
+                      <v-row
+                        align="center"
+                        justify="center"
+                      >
+                        <img src="/team_1.jpg" alt="">
+                      </v-row>
+                      <v-row
+                        align="center"
+                        justify="center"
+                      >
+                        <p style="font-size: 25px" class="pt-10 pb-5">
+                          立即下载
+                        </p>
+                      </v-row>
+                      <v-divider />
+                    </v-flex>
                   </v-card-text>
                 </section>
               </v-flex>
               <v-flex xs4 pa-2>
                 <section style="height: 80vh;">
                   <v-card-text class="px-0">
-                    <img src="/team_2.jpg" alt="">
-                    <p>
-                      123321
-                    </p>
+                    <v-flex>
+                      <v-row
+                        align="center"
+                        justify="center"
+                      >
+                        <img src="/team_2.jpg" alt="">
+                      </v-row>
+                      <v-row
+                        align="center"
+                        justify="center"
+                      >
+                        <p style="font-size: 25px" class="pt-10 pb-5">
+                          更新日志
+                        </p>
+                      </v-row>
+                      <v-divider />
+                      <v-row
+                        align="center"
+                        justify="center"
+                      >
+                        <p style="font-size: 20px" class="pt-10 pb-5">
+                          {{latest_patch}}
+                        </p>
+                      </v-row>
+                    </v-flex>
                   </v-card-text>
                 </section>
               </v-flex>
               <v-flex xs4 pa-2>
                 <section style="height: 80vh;">
                   <v-card-text class="px-0">
-                    <img src="/team_3.jpg" alt="">
-                    <p>
-                      123321
-                    </p>
+                    <v-flex>
+                      <v-row
+                        align="center"
+                        justify="center"
+                      >
+                        <img src="/team_3.jpg" alt="">
+                      </v-row>
+                      <v-row
+                        align="center"
+                        justify="center"
+                      >
+                        <p style="font-size: 25px" class="pt-10 pb-5">
+                          近期开发目标
+                        </p>
+                      </v-row>
+                      <v-divider />
+                    </v-flex>
                   </v-card-text>
                 </section>
               </v-flex>
@@ -87,7 +145,7 @@
                 <p
                   class="header text-center white--text"
                 >
-                  下载链接
+                  联系我们
                 </p>
                 <v-col />
               </v-col>
@@ -120,58 +178,21 @@
 import {
   mdiPodiumGold,
   mdiFrequentlyAskedQuestions,
-  mdiUpdate
+  mdiUpdate,
+  mdiChevronTripleDown
 } from '@mdi/js'
 
 export default {
   data () {
     return {
-      articles: [
-        {
-          src: 'https://images.unsplash.com/photo-1423784346385-c1d4dac9893a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80',
-          title: 'Mobile first & Responsive',
-          text: 'Phasellus lorem enim, luctus ut velit eget, convallis egestas eros. Sed ornare ligula eget tortor tempor, quis porta tellus dictum.'
-        },
-        {
-          src: 'https://images.unsplash.com/photo-1475938476802-32a7e851dad1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80',
-          title: 'Think outside the box',
-          text: 'Nam ut leo ipsum. Maecenas pretium aliquam feugiat. Aenean vel tempor est, vitae tincidunt risus. Sed sodales vestibulum nibh.'
-        },
-        {
-          src: 'https://images.unsplash.com/photo-1416339442236-8ceb164046f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1892&q=80',
-          title: 'Small changes, big difference',
-          text: 'Vestibulum in dictum velit, in rhoncus nibh. Maecenas neque libero, interdum a dignissim in, aliquet vitae lectus. Phasellus lorem enim, luctus ut velit eget.'
-        }
-      ],
-      features: [
-        {
-          icon: 'mdi-account-group-outline',
-          title: 'Vibrant Community',
-          text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto cupiditate sint possimus quidem atque harum excepturi nemo velit tempora! Enim inventore fuga, qui ipsum eveniet facilis obcaecati corrupti asperiores nam'
-        },
-        {
-          icon: 'mdi-update',
-          title: 'Frequent Updates',
-          text: 'Sed ut elementum justo. Suspendisse non justo enim. Vestibulum cursus mauris dui, a luctus ex blandit. Lorem ipsum dolor sit amet consectetur adipisicing elit. qui ipsum eveniet facilis obcaecati corrupti consectetur adipisicing elit.'
-        },
-        {
-          icon: 'mdi-shield-outline',
-          title: 'Long-term Support',
-          text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto cupiditate sint possimus quidem atque harum excepturi nemo velit tempora! Enim inventore fuga, qui ipsum eveniet facilis obcaecati corrupti asperiores nam'
-        }
-      ],
-      stats: [
-        ['24k', 'Github Stars'],
-        ['330+', 'Releases'],
-        ['1m', 'Downloads/mo'],
-        ['5m', 'Total Downloads']
-      ],
       collapseOnScroll: true,
       icons: {
         leaderboard: mdiPodiumGold,
         faq: mdiFrequentlyAskedQuestions,
-        update_note: mdiUpdate
-      }
+        update_note: mdiUpdate,
+        down_arrow: mdiChevronTripleDown
+      },
+      latest_patch: '3.1.1更新日志(2021.9.19)\n靶场更新:\n修复有关靶场练习范围的bug'
     }
   }
 }

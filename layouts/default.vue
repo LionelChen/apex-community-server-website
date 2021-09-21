@@ -6,9 +6,12 @@
         dark
         fixed
       >
-        <v-app-bar-nav-icon />
 
         <v-toolbar-title>APEX社区服</v-toolbar-title>
+        <v-btn class="pa-2 ma-2" to="/" router exact>
+          主页
+          <v-icon>{{ icons.home_icon }}</v-icon>
+        </v-btn>
 
         <v-spacer />
 
@@ -29,30 +32,6 @@
           <v-icon>{{ icons.update_note }}</v-icon>
         </v-btn>
 
-        <v-menu
-          left
-          bottom
-        >
-          <template #activator="{ on, attrs }">
-            <v-btn
-              icon
-              v-bind="attrs"
-              v-on="on"
-            >
-              <v-icon>mdi-dots-vertical</v-icon>
-            </v-btn>
-          </template>
-
-          <v-list>
-            <v-list-item
-              v-for="n in 5"
-              :key="n"
-              @click="() => {}"
-            >
-              <v-list-item-title>Option {{ n }}</v-list-item-title>
-            </v-list-item>
-          </v-list>
-        </v-menu>
       </v-app-bar>
       <v-main>
         <v-container fluid class="page" pa-0>
@@ -83,7 +62,7 @@
             <v-divider />
 
             <v-card-text class="white--text">
-              {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
+              {{ new Date().getFullYear() }} — <strong>APEX社区服</strong>
             </v-card-text>
           </v-card>
         </v-footer>
@@ -98,7 +77,8 @@ import {
   mdiFrequentlyAskedQuestions,
   mdiUpdate,
   mdiServerNetwork,
-  mdiQqchat
+  mdiQqchat,
+  mdiHome
 } from '@mdi/js'
 
 export default {
@@ -110,7 +90,8 @@ export default {
         faq: mdiFrequentlyAskedQuestions,
         update_note: mdiUpdate,
         servers: mdiServerNetwork,
-        qq_chat: mdiQqchat
+        qq_chat: mdiQqchat,
+        home_icon: mdiHome
       }
     }
   }
