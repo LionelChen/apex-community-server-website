@@ -40,9 +40,9 @@
               <v-col>
                 <p
                   class="header text-center white--text"
-                  style="font-size: 40px"
+                  style="font-size: 50px"
                 >
-                  更新日志
+                  公告
                 </p>
                 <v-col />
               </v-col>
@@ -114,7 +114,7 @@
                         justify="center"
                       >
                         <p style="font-size: 20px" class="pt-10 pb-5">
-                          版本号: {{ latest_patch.version }}, 更新日期: {{ latest_patch.date}}
+                          版本号: {{ latest_patch.version }}, 更新日期: {{ latest_patch.date }}
                         </p>
                       </v-row>
                       <v-row
@@ -156,7 +156,7 @@
           </v-container>
         </v-flex>
 
-        <v-flex id="download_top" xs12 class="px-0" style="height: 40vh">
+        <v-flex id="contact_top" xs12 class="px-0" style="height: 40vh">
           <v-container fill-height fluid>
             <v-row
               align="center"
@@ -165,6 +165,7 @@
               <v-col>
                 <p
                   class="header text-center white--text"
+                  style="font-size: 50px"
                 >
                   联系我们
                 </p>
@@ -174,18 +175,70 @@
           </v-container>
         </v-flex>
 
-        <v-flex id="download" xs12 class="px-0" style="height: 80vh">
-          <v-container fill-height fluid>
+        <v-flex id="contact" xs12 class="px-0" style="height: 80vh">
+          <v-container fill-height fluid class="pl-10 pr-10">
             <v-row
               align="center"
               justify="center"
             >
-              <v-flex v-for="i in 3" :key="`4${i}`" xs4 pa-2>
-                <v-card color="secondary" style="height: 80vh;">
+              <v-flex xs4 pa-2>
+                <section style="height: 80vh;">
                   <v-card-text class="px-0">
-                    4
+                    <v-flex>
+                      <v-row
+                        align="center"
+                        justify="center"
+                      >
+                        <img src="/team_1.jpg" alt="">
+                      </v-row>
+                      <v-row
+                        align="center"
+                        justify="center"
+                      >
+                        <p style="font-size: 25px" class="pt-10 pb-5">
+                          社交账号
+                        </p>
+                      </v-row>
+                      <v-divider />
+                      <v-row
+                        align="center"
+                        justify="center"
+                      >
+                        <a
+                          href="https://space.bilibili.com/694820807"
+                          style="font-size: 25px"
+                          class="pt-10 pb-5"
+                        >
+                          Bilibili
+                        </a>
+                      </v-row>
+                      <v-row
+                        align="center"
+                        justify="center"
+                      >
+                        <a
+                          href="https://kaihei.co/WFfWRm"
+                          style="font-size: 25px"
+                          class="pt-10 pb-5"
+                        >
+                          开黑啦
+                        </a>
+                      </v-row>
+                      <v-row
+                        align="center"
+                        justify="center"
+                      >
+                        <a
+                          href=""
+                          style="font-size: 25px"
+                          class="pt-10 pb-5"
+                        >
+                          QQ群：959166167
+                        </a>
+                      </v-row>
+                    </v-flex>
                   </v-card-text>
-                </v-card>
+                </section>
               </v-flex>
             </v-row>
           </v-container>
@@ -249,7 +302,7 @@ html{
   background-size: cover;
 }
 
-#download_top {
+#contact_top {
   /* The image used */
   background-image: url("/gallery_bg.jpg");
 

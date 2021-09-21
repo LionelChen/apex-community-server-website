@@ -8,15 +8,6 @@
       >
         <span class="text-h6">更新日志</span>
         <v-spacer />
-        <v-btn
-          :outlined="interval == null"
-          :color="interval == null ? 'white' : 'primary'"
-          dark
-          depressed
-          @click="interval == null ? start() : stop()"
-        >
-          添加更多测试更新日志
-        </v-btn>
       </v-card-title>
       <v-card-text class="py-0">
         <v-timeline>
@@ -25,8 +16,8 @@
             hide-on-leave
           >
             <v-timeline-item
-              v-for="item in items"
-              :key="item.id"
+              v-for="(item,id) in patch_notes"
+              :key="id"
               :color="item.color"
               small
               fill-dot
@@ -34,7 +25,7 @@
               <template #opposite>
                 <span
                   :class="`headline font-weight-bold`"
-                  v-text="String('2021/08/30')"
+                  v-text="item.date"
                 />
               </template>
               <v-alert
@@ -43,7 +34,7 @@
                 :icon="item.icon"
                 class="white--text"
               >
-                Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.
+                {{ item.content }}
               </v-alert>
             </v-timeline-item>
           </v-slide-x-reverse-transition>
@@ -77,54 +68,28 @@ export default {
         icon: ICONS.info
       }
     ],
-    nonce: 2
+    nonce: 2,
+    patch_notes: [{
+      version: '3.1.1',
+      date: '2021.9.19',
+      content: '靶场更新:修复有关靶场练习范围的bug',
+      color: COLORS[0],
+      icon: ICONS.info
+    }, {
+      version: '3.1.0',
+      date: '2021.9.19',
+      content: '更新了NKProtect 1.0b反作弊系统',
+      color: 'info',
+      icon: ICONS.info
+    }
+    ]
   }),
 
   beforeDestroy () {
-    this.stop()
+    // this.stop()
   },
 
   methods: {
-    addEvent () {
-      let { color, icon } = this.genAlert()
-
-      const previousColor = this.items[0].color
-
-      while (previousColor === color) {
-        color = this.genColor()
-      }
-
-      this.items.unshift({
-        id: this.nonce++,
-        color,
-        icon
-      })
-
-      if (this.nonce > 8) {
-        this.items.pop()
-      }
-    },
-    genAlert () {
-      const color = this.genColor()
-
-      return {
-        color,
-        icon: this.genIcon(color)
-      }
-    },
-    genColor () {
-      return COLORS[Math.floor(Math.random() * 3)]
-    },
-    genIcon (color) {
-      return ICONS[color]
-    },
-    start () {
-      this.interval = setInterval(this.addEvent, 3000)
-    },
-    stop () {
-      clearInterval(this.interval)
-      this.interval = null
-    }
   }
 }
 </script>
