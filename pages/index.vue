@@ -28,6 +28,7 @@
               <v-col>
                 <p
                   class="header text-center white--text"
+                  style="font-size: 40px"
                 >
                   更新日志
                 </p>
@@ -36,18 +37,41 @@
             </v-row>
           </v-container>
         </v-flex>
-        <v-flex id="works_content" xs12 class="px-0 mb-5" style="height: 80vh">
-          <v-container fill-height fluid>
+        <v-flex id="works_content" xs12 class="pt-0 mb-5" style="height: 80vh">
+          <v-container fill-height fluid class="pl-10 pr-10">
             <v-row
               align="center"
               justify="center"
             >
-              <v-flex v-for="i in 3" :key="`4${i}`" xs4 pa-2>
-                <v-card color="secondary" style="height: 80vh;">
+              <v-flex xs4 pa-2>
+                <section style="height: 80vh;">
                   <v-card-text class="px-0">
-                    4
+                    <img src="/team_1.jpg" alt="">
+                    <p>
+                      123321
+                    </p>
                   </v-card-text>
-                </v-card>
+                </section>
+              </v-flex>
+              <v-flex xs4 pa-2>
+                <section style="height: 80vh;">
+                  <v-card-text class="px-0">
+                    <img src="/team_2.jpg" alt="">
+                    <p>
+                      123321
+                    </p>
+                  </v-card-text>
+                </section>
+              </v-flex>
+              <v-flex xs4 pa-2>
+                <section style="height: 80vh;">
+                  <v-card-text class="px-0">
+                    <img src="/team_3.jpg" alt="">
+                    <p>
+                      123321
+                    </p>
+                  </v-card-text>
+                </section>
               </v-flex>
             </v-row>
           </v-container>

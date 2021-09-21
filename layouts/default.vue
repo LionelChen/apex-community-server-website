@@ -97,7 +97,8 @@ import {
   mdiPodiumGold,
   mdiFrequentlyAskedQuestions,
   mdiUpdate,
-  mdiServerNetwork
+  mdiServerNetwork,
+  mdiQqchat
 } from '@mdi/js'
 
 export default {
@@ -108,7 +109,8 @@ export default {
         leaderboard: mdiPodiumGold,
         faq: mdiFrequentlyAskedQuestions,
         update_note: mdiUpdate,
-        servers: mdiServerNetwork
+        servers: mdiServerNetwork,
+        qq_chat: mdiQqchat
       }
     }
   }
