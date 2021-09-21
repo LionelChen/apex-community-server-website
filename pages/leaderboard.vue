@@ -1,7 +1,7 @@
 <template>
   <v-simple-table
     dark
-    class="mt-16"
+    class="ml-16 mr-16 data-table"
     loading
     loading-text="Loading... Please wait"
   >
@@ -307,6 +307,10 @@ export default {
   background: rgb(30, 30, 30);
   overflow: hidden;
   animation: noise-anim-2 30s infinite linear alternate-reverse;
+}
+
+.data-table {
+  margin-top: 5%;
 }
 
 </style>
