@@ -21,12 +21,13 @@
               align="center"
               justify="center"
             >
-              <v-btn
-                elevation="2"
-                href="#works-top"
-              >
-                <v-icon>{{ icons.down_arrow }}</v-icon>
-              </v-btn>
+              <a href="#works_top">
+                <v-btn
+                  elevation="2"
+                >
+                  <v-icon>{{ icons.down_arrow }}</v-icon>
+                </v-btn>
+              </a>
             </v-row>
           </v-container>
         </v-flex>
@@ -73,6 +74,18 @@
                         </p>
                       </v-row>
                       <v-divider />
+                      <v-row
+                        align="center"
+                        justify="center"
+                      >
+                        <a
+                          href="https://apexdownload.bk201.icu/"
+                          style="font-size: 25px"
+                          class="pt-10 pb-5"
+                        >
+                          云盘链接
+                        </a>
+                      </v-row>
                     </v-flex>
                   </v-card-text>
                 </section>
@@ -101,7 +114,15 @@
                         justify="center"
                       >
                         <p style="font-size: 20px" class="pt-10 pb-5">
-                          {{latest_patch}}
+                          版本号: {{ latest_patch.version }}, 更新日期: {{ latest_patch.date}}
+                        </p>
+                      </v-row>
+                      <v-row
+                        align="center"
+                        justify="center"
+                      >
+                        <p style="font-size: 20px">
+                          {{ latest_patch.content }}
                         </p>
                       </v-row>
                     </v-flex>
@@ -192,13 +213,22 @@ export default {
         update_note: mdiUpdate,
         down_arrow: mdiChevronTripleDown
       },
-      latest_patch: '3.1.1更新日志(2021.9.19)\n靶场更新:\n修复有关靶场练习范围的bug'
+      latest_patch: {
+        version: '3.1.1',
+        date: '2021.9.19',
+        content: '靶场更新:修复有关靶场练习范围的bug'
+      }
     }
   }
 }
 </script>
 
 <style>
+
+html{
+  scroll-behavior: smooth;
+}
+
 #landing{
   background: url('/loader.png');
   background-repeat: no-repeat;
