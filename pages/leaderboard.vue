@@ -1,7 +1,7 @@
 <template>
   <v-simple-table
     dark
-    class="ml-16 mr-16 data-table"
+    class="data-table"
     loading
     loading-text="Loading... Please wait"
   >
@@ -311,6 +311,8 @@ export default {
 
 .data-table {
   margin-top: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 </style>
