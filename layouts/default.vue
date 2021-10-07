@@ -1,38 +1,6 @@
 <template>
   <div id="app" style="min-height: 100vh;">
     <v-app>
-      <v-app-bar
-        color="red accent-4"
-        dark
-        fixed
-      >
-
-        <v-toolbar-title>APEX社区服</v-toolbar-title>
-        <v-btn class="pa-2 ma-2" to="/" router exact>
-          主页
-          <v-icon>{{ icons.home_icon }}</v-icon>
-        </v-btn>
-
-        <v-spacer />
-
-        <v-btn class="pa-2 ma-2" to="/leaderboard" router exact>
-          排行榜
-          <v-icon>{{ icons.leaderboard }}</v-icon>
-        </v-btn>
-        <v-btn class="pa-2 ma-2" to="/servers" router exact>
-          服务器
-          <v-icon>{{ icons.servers }}</v-icon>
-        </v-btn>
-        <v-btn class="pa-2 ma-2" to="/faq" router exact>
-          常见问题
-          <v-icon>{{ icons.faq }}</v-icon>
-        </v-btn>
-        <v-btn class="pa-2 ma-2" to="/patchnote" router exact>
-          更新日志
-          <v-icon>{{ icons.update_note }}</v-icon>
-        </v-btn>
-
-      </v-app-bar>
       <v-main>
         <v-container fluid class="page" pa-0>
           <nuxt />

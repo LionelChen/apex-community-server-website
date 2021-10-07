@@ -1,8 +1,53 @@
 <template>
-  <v-layout column justify-center align-center app mt-16>
+  <v-layout column justify-center align-center app>
     <v-container grid-list-md text-xs-center fluid pa-0>
       <v-layout row wrap>
         <v-flex id="landing" xs12 class="px-0 text-h1" style="height: 100vh;">
+          <v-app-bar
+            style="background-color: rgba(255, 255, 255, .2);"
+            flat
+          >
+            <v-toolbar-title>
+              <v-btn icon lass="pa-2 ma-2">
+                <img src="/logo.png" style="max-height: 3vh">
+              </v-btn>
+            </v-toolbar-title>
+            <v-tooltip bottom>
+              <template #activator="{ on, attrs }">
+                <v-btn
+                  icon
+                  v-bind="attrs"
+                  class="pa-2 ml-5"
+                  v-on="on"
+                >
+                  <img src="/QQ.png" style="max-height: 3vh">
+                </v-btn>
+              </template>
+              <span><img src="/QQ_QRcode.jpg" style="max-height: 10vh" ></span>
+            </v-tooltip>
+
+            <v-btn icon class="pa-2 ma-2">
+              <img src="/bilibili-line.png" style="max-height: 3vh">
+            </v-btn>
+
+            <v-spacer />
+
+            <v-btn plain class="pt-3" to="/" router exact>
+              <img src="/Home.png" style="max-height: 10vh">
+            </v-btn>
+            <v-btn plain class="pt-3" to="/leaderboard" router exact>
+              <img src="/Ranking.png" style="max-height: 10vh">
+            </v-btn>
+            <v-btn plain class="pt-3" to="/servers" router exact>
+              <img src="/server.png" style="max-height: 10vh">
+            </v-btn>
+            <v-btn plain class="pt-3" to="/faq" router exact>
+              <img src="/FAQ.png" style="max-height: 10vh">
+            </v-btn>
+            <v-btn plain class="pt-3" to="/patchnote" router exact>
+              <img src="/DAILY.png" style="max-height: 10vh">
+            </v-btn>
+          </v-app-bar>
           <v-container fill-height fluid>
             <v-row
               align="center"
